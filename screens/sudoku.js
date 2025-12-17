@@ -314,16 +314,29 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "flex-start",
   },
-  title: { fontSize: 28, fontWeight: "700", marginBottom: 10, color: "#fff" },
-  controlsRow: { flexDirection: "row", marginBottom: 12 },
-  controlButton: {
+  title: { fontSize: 32,
+     fontWeight: "700",
+      marginBottom: 10,
+      color: "#fff" ,
+      textShadowColor: '#00eaffff',
+      textShadowOffset: { width: 0, height: 0 },
+      textShadowRadius: 10,
+    },
+    controlsRow:{ 
+      flexDirection: "row",
+      marginBottom: 12
+    },
+    controlButton: {
     paddingHorizontal: 12,
     paddingVertical: 8,
     backgroundColor: "#9900ffff",
     marginHorizontal: 6,
     borderRadius: 6,
   },
-  controlText: { color: "white", fontWeight: "600" },
+  controlText:{
+    color: "white",
+    fontWeight: "600" 
+  },
   grid: {
     width: 9 * 38,
     height: 9 * 38,
@@ -370,7 +383,10 @@ const styles = StyleSheet.create({
     borderColor: "#ddd",
   },
   numButtonText: { fontSize: 16, color: "#ffffffff", fontWeight: "600" },
-  clearButton: { color: "#ffffffff", backgroundColor: "#9900ffff" },
+  clearButton: {
+    color: "#ffffffff",
+    backgroundColor: "#9900ffff",
+  },
 });
 
 export default SudokuApp;
