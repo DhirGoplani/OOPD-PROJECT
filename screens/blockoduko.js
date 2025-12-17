@@ -288,10 +288,13 @@ const Blockoduko = () => {
         <Text style={styles.title}>Blockodoku</Text>
 
         <View style={styles.scoreContainer}>
-          <Text style={styles.score}>Score: {score}</Text>
-          <Text style={styles.highScore}>High Score: {highScore}</Text>
-          <Text style={styles.multiplier}>Multiplier: {multiplier}x</Text>
-        </View>
+  <View style={styles.scoreRow}>
+    <Text style={styles.score}>Score: {score}</Text>
+    <Text style={styles.highScore}>High Score: {highScore}</Text>
+  </View>
+
+  <Text style={styles.multiplier}>Multiplier: {multiplier}x</Text>
+</View>
 
         <View>
           {grid.matrix.map((row, rowIndex) => (
@@ -356,54 +359,54 @@ const styles = StyleSheet.create({
   title: {
   fontSize: 36,
   fontWeight: 'bold',
-  color: "#fff",
+  color: "#ffffffff",
   textShadowColor: '#9900ff',
   textShadowOffset: { width: 0, height: 0 },
   textShadowRadius: 12,
   marginBottom: 10,
 },
-scoreContainer: {
+scoreRow: {
   flexDirection: 'row',
-  justifyContent: 'space-between', 
   alignItems: 'center',
-  width: '100%',                   
-  paddingHorizontal: 20,           
-  marginBottom: 20,
+  justifyContent: 'space-between',
+  width: '100%',
+  paddingHorizontal: 20,
+  marginBottom: 8,
 },
 multiplier: {
   fontSize: 16,
-  color: '#ff33cc',
+  color: '#33cfffff',
   fontWeight: 'bold',
-  textShadowColor: '#ff00ff',
+  textShadowColor: '#00eaffff',
   textShadowOffset: { width: 0, height: 0 },
   textShadowRadius: 10,
   transform: [{ scale: 1.2 }],
-  minWidth: 80,          
   textAlign: 'center',
 },
-
 score: {
   fontSize: 16,
-  color: '#ff33cc',
+  color: '#33cfffff',
   fontWeight: 'bold',
-  textShadowColor: '#ff00ff',
+  textAlign: 'left',
+  textShadowColor: '#00eaffff',
   textShadowOffset: { width: 0, height: 0 },
   textShadowRadius: 10,
   transform: [{ scale: 1.2 }],
-  minWidth: 80,
-  textAlign: 'center',
+  minWidth: 120,
+  marginLeft: 16, 
 },
 
 highScore: {
   fontSize: 16,
-  color: '#ff33cc',
+  color: '#33cfffff',
   fontWeight: 'bold',
-  textShadowColor: '#ff00ff',
+  textAlign: 'right',
+  textShadowColor: '#00eaffff',
   textShadowOffset: { width: 0, height: 0 },
   textShadowRadius: 10,
   transform: [{ scale: 1.2 }],
-  minWidth: 80,
-  textAlign: 'center',
+  minWidth: 120,
+  marginRight: 16, 
 },
 
 
